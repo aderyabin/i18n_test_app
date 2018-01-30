@@ -1,0 +1,10 @@
+sudo: false
+dist: trusty
+language: ruby
+cache: bundler
+
+rvm: 2.5.0
+script:
+  - bundle exec localer
+  - bundle exec i18n-tasks health
+  - bundle exec i18n-tasks missing
